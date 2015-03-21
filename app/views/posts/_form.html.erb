@@ -1,12 +1,17 @@
 
-	<%= simple_form_for(@post, html: { class: 'form-horizontal' }) do |f| %>
+<%= simple_form_for(@post, html: { class: 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :title, input_html: {class: "form-control"}, label: false, placeholder: "Title"  %>
     <%= f.input :content, input_html: {class: "form-control"}, label: false, placeholder: "Add your post content here" %>
-  </div>
 
+    <% if current_user.verify_permissions == 1 %>
+      <label>Post on Facebook</label>
+      <%= f.check_box :post_on_facebook, class: "checkbox" %>
+    <% end %>
+  </div>
+  <br>
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-lg btn-primary" %>
   </div>
