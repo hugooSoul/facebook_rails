@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'simple_form'
 gem 'devise'
 gem 'omniauth-facebook'
+gem "flat-ui-rails"
+gem "koala", "~> 1.11.0rc"
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

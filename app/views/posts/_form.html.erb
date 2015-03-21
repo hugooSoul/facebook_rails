@@ -1,16 +1,14 @@
-<div class="container">
 
 	<%= simple_form_for(@post, html: { class: 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :content %>
+    <%= f.input :title, input_html: {class: "form-control"}, label: false, placeholder: "Title"  %>
+    <%= f.input :content, input_html: {class: "form-control"}, label: false, placeholder: "Add your post content here" %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-lg btn-primary" %>
   </div>
 <% end %>
 	
-</div>
